@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        // https://www.baeldung.com/kotlin/csv-files 참고
+
         val movies = readCsv(/*Open a stream to CSV file*/)
 
         FileOutputStream("filename.csv").apply { writeCsv(movies) }
